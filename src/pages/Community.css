@@ -29,12 +29,13 @@
 
 .community__cards h2 {
   margin: 0;
+  color: white;
   font-family: var(--font-display);
 }
 
 .community__cards p {
   margin: 0.45rem 0 0;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 @media (max-width: 860px) {
