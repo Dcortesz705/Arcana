@@ -1,4 +1,6 @@
 import './Home.css'
+import ScrollTriggered from '../components/ScrollTriggered'
+import { motion } from 'framer-motion'
 
 function Home() {
   return (
@@ -16,18 +18,33 @@ function Home() {
         </div>
 
         <div className="home__hero-cards" aria-label="Acciones principales">
-          <article className="card">
+          <motion.article 
+            className="card"
+            whileHover={{ scale: 1.05, y: -8 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', bounce: 0.4 }}
+          >
             <span className="card__title">Controla</span>
             <p>desde un sólo lugar, quiénes pueden acceder a tu hogar</p>
-          </article>
-          <article className="card card--tall">
+          </motion.article>
+          <motion.article 
+            className="card card--tall"
+            whileHover={{ scale: 1.05, y: -8 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', bounce: 0.4 }}
+          >
             <span className="card__title">Entérate</span>
             <p>de todas las novedades de tu comunidad</p>
-          </article>
-          <article className="card">
+          </motion.article>
+          <motion.article 
+            className="card"
+            whileHover={{ scale: 1.05, y: -8 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', bounce: 0.4 }}
+          >
             <span className="card__title">Accede</span>
             <p>a todas las comodidades de tu comunidad.</p>
-          </article>
+          </motion.article>
         </div>
       </section>
 
@@ -37,27 +54,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="container home__blocks">
-        <article className="home__block home__block--tall">
-          <h3>Objetivo</h3>
-          <p>Proveer a las comunidades residenciales de un sistema integrado,
-            donde la tecnología permite facilitar procesos, mejorar la trazsabilidad, y 
-            enfrentar la seguridad con la mejor tecnología que de confianza a sus usuarios. 
-            </p>
-        </article>
-        <article className="home__block">
-          <h3>Residentes</h3>
-          <p>Menos llamadas, mayor tranquilidad para autorizar visitas. Con la app, puedes confiar en los 
-            accesos seguros a tu comunidad, administrar miembros del hogar, programar domicilios y recibir 
-            notificaciones cuando recibas un paquete.
-            </p>
-        </article>
-        <article className="home__block">
-          <h3>Porteria</h3>
-          <p>Sistema mas claro para reducir presion y agilizar ingresos. Tecnología que permite mayor trazabilidad,
-            un monitoreo más seguro, y confianza entre el residente y su servicio de seguridad. 
-            </p>
-        </article>
+      <section className="container">
+        <ScrollTriggered />
       </section>
     </div>
   )
