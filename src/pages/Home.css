@@ -6,9 +6,12 @@
 
 /* ===== HERO SECTION ===== */
 .home__hero {
-  min-height: 80vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
+  background: radial-gradient(ellipse at center, rgba(47, 111, 237, 0.15) 0%, transparent 70%);
+  position: relative;
+  padding: 2rem;
 }
 
 .home__hero-content {
@@ -100,6 +103,16 @@
   gap: 2rem;
 }
 
+.home__methods-cards .card h2 svg,
+.home__control-list .card h2 svg,
+.home__complete-cards .card h2 svg {
+  width: 2rem;
+  height: 2rem;
+  color: #2F6FED;
+  margin-right: 0.5rem;
+  stroke-width: 1.5;
+}
+
 
 /* ===== CONTROL DE ACCESO SECTION ===== */
 .home__control {
@@ -124,7 +137,7 @@
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   color: #fff;
   margin: 0;
-  text-align: center;
+  align-items: center;
 }
 
 .home__control-highlight {
@@ -137,6 +150,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
+  text-align: right;
 }
 
 /* ===== PLATAFORMA COMPLETA SECTION ===== */
@@ -175,20 +189,154 @@
   }
 
   .home__hero {
-    min-height: 60vh;
-    padding: 2rem;
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+
+  .home__logo {
+    width: 80px;
+  }
+
+  .home__arcana-title {
+    width: 250px;
   }
 
   .home__hero h2 {
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   }
 
+  .home__methods {
+    padding: 2rem 1rem;
+  }
+
+  .home__control {
+    padding: 2rem 1rem;
+  }
+
   .home__control-header {
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .home__control-header h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .home__control-highlight {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .home__control-header p {
+    font-size: 1rem;
   }
 
   .home__control-list {
     gap: 1.5rem;
+    text-align: left;
+  }
+
+  .home__complete {
+    padding: 2rem 1rem;
+  }
+
+  .home__complete h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  .home__hero {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .home__logo {
+    width: 70px;
+  }
+
+  .home__arcana-title {
+    width: 200px;
+  }
+
+  .home__hero h2 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+
+  .home__hero-content {
+    gap: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .home__methods {
+    padding: 1.5rem 1rem;
+  }
+
+  .home__methods h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .home__methods > p {
+    font-size: 0.95rem;
+  }
+
+  .home__methods-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home__control {
+    padding: 1.5rem 1rem;
+  }
+
+  .home__control-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .home__control-header h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+  .home__control-highlight {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+  .home__control-header p {
+    font-size: 0.9rem;
+  }
+
+  .home__control-list {
+    gap: 1.2rem;
+    text-align: left;
+  }
+
+  .home__complete {
+    padding: 1.5rem 1rem;
+  }
+
+  .home__complete h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .home__complete-cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .home__methods-cards .card h2 svg,
+  .home__control-list .card h2 svg,
+  .home__complete-cards .card h2 svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

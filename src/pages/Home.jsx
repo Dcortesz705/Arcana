@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Card from '../components/Cards'
 import logo_azul  from '../imagenes/Logo_azul.svg'
 import arcanaImg from '../imagenes/arcana.svg'
+import { FiShield, FiClock, FiUsers, FiSmartphone, FiMapPin, FiSettings } from 'react-icons/fi'
 
 function Home() {
   const navigate = useNavigate()
@@ -41,33 +42,42 @@ function Home() {
         <div className="home__methods-cards">
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
             transition={{ type: 'spring', bounce: 0.4 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <Card 
-              title="Seguridad inteligente"
-              description="Reconocimiento facial y de placas en tiempo real"
+              title={<><FiShield /> Seguridad vulnerable</>}
+              description="Regístro manual y sin información confiable de identidad real"
               modifier="feature-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.1 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <Card 
-              title="Privadas tarifas"
-              description="Control total sobre acceso y permisos de usuarios"
+              title={<><FiClock /> Procesos lentos</>}
+              description="Gestión manual de visitantes, demoras en autorización"
               modifier="feature-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.2 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
-            <Card 
-              title="Diseño escalable"
-              description="Crece con tu comunidad sin limitaciones"
+            <Card
+              title={<><FiUsers /> Gestión compleja</>}
+              description="Administración dispersa y complicada de la comunidad"
               modifier="feature-card"
             />
           </motion.div>
@@ -85,33 +95,42 @@ function Home() {
         <div className="home__control-list">
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
             transition={{ type: 'spring', bounce: 0.4 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <Card 
-              title="Autenticación inteligente"
-              description="Identifica a los residentes mediante reconocimiento facial avanzado"
+              title={<><FiSmartphone /> Autorización instantánea</>}
+              description="Los residentes aprueban videos en seguridad sin estar pendiente del portero"
               modifier="control-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.1 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
-            <Card 
-              title="Verificación en portería"
-              description="Valida acceso de visitantes y proveedores con un toque"
+            <Card
+              title={<><FiMapPin /> Verificación en portería</>}
+              description="El portero confirma la identidad y otorga acceso automáticamente"
               modifier="control-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.2 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
-            <Card 
-              title="Trazabilidad completa"
-              description="Registra cada entrada y salida con timestamp y datos biométricos"
+            <Card
+              title={<><FiMapPin /> Trazabilidad completa</>}
+              description="Todo queda registrado en tiempo real e históricos accesibles"
               modifier="control-card"
             />
           </motion.div>
@@ -125,33 +144,42 @@ function Home() {
         <div className="home__complete-cards">
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
             transition={{ type: 'spring', bounce: 0.4 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <Card 
-              title="Seguridad integral"
-              description="Protege a tu comunidad con tecnología de punta"
+              title={<><FiShield /> Seguridad total</>}
+              description="Identifica amenaza y la bloquea automáticamente"
               modifier="complete-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.1 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
-            <Card 
-              title="Control remoto"
-              description="Gestiona accesos desde cualquier lugar del mundo"
+            <Card
+              title={<><FiSmartphone /> Control remoto</>}
+              description="Autoriza desde donde sea, acceso instantáneo para residentes"
               modifier="complete-card"
             />
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05, y: -8 }}
-            transition={{ type: 'spring', bounce: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ type: 'spring', bounce: 0.4, delay: 0.2 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <Card 
-              title="Fácil administración"
-              description="Interfaz intuitiva para administradores y residentes"
+              title={<><FiSettings /> Fácil administración</>}
+              description="Reportes automáticos y alertas para mayor control"
               modifier="complete-card"
             />
           </motion.div>

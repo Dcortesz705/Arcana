@@ -8,6 +8,7 @@
   gap: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .card h2 {
@@ -15,6 +16,11 @@
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .card p {
@@ -62,10 +68,11 @@
 /* Control Card Variant */
 .card.control-card {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
+  grid-template-columns: 120px 1fr;
+  align-items: start;
   gap: 2rem;
   padding: 2.5rem;
+  padding-left: 4rem;
   position: relative;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -79,30 +86,39 @@
 
 .card.control-card h2 {
   grid-column: 2;
+  grid-row: 1;
   font-size: 1.3rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   text-align: left;
+  justify-content: flex-start;
 }
 
 .card.control-card p {
   grid-column: 2;
+  grid-row: 2;
   text-align: left;
-  margin: -3rem 0 0 0;
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .card.control-card::before {
+  grid-column: 1;
   grid-row: 1 / 3;
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: var(--font-display);
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .home__control-list > div:nth-child(1) .card.control-card::before {
@@ -142,5 +158,50 @@
 
   .card.demo-card {
     padding: 1.2rem;
+  }
+
+  .card.control-card::before {
+    font-size: 2.5rem;
+    left: 1.5rem;
+  }
+
+  .card.control-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card.control-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .card.feature-card {
+    padding: 1.5rem;
+  }
+
+  .card.complete-card {
+    padding: 1.5rem;
+  }
+
+  .card.control-card {
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+  }
+
+  .card.control-card::before {
+    font-size: 1.8rem;
+    left: 1rem;
+  }
+
+  .card.control-card h2 {
+    font-size: 1rem;
+  }
+
+  .card.control-card p {
+    font-size: 0.8rem;
   }
 }
