@@ -19,13 +19,13 @@ function Navbar() {
         </div>
 
         <nav className="navbar__links" aria-label="Navegacion principal">
-          <NavLink to="/" end className="navbar__link">
+          <NavLink to="/" end className="navbar__link" tabIndex={1}>
             Inicio
           </NavLink>
-          <NavLink to="/community" className="navbar__link">
+          <NavLink to="/community" className="navbar__link" tabIndex={3}>
             Comunidad
           </NavLink>
-          <NavLink to="/contact" className="navbar__link">
+          <NavLink to="/contact" className="navbar__link" tabIndex={4}>
             Solicitar demo
           </NavLink>
         </nav>
@@ -44,13 +44,13 @@ function Navbar() {
       </div>
 
       <div className={`navbar__mobile ${isMenuOpen ? 'open' : ''}`}>
-        <NavLink to="/" end className="navbar__link">
+        <NavLink to="/" end className="navbar__link" tabIndex={1}>
           Inicio
         </NavLink>
-        <NavLink to="/community" className="navbar__link">
+        <NavLink to="/community" className="navbar__link" tabIndex={3}>
           Comunidad
         </NavLink>
-        <NavLink to="/contact" className="navbar__link">
+        <NavLink to="/contact" className="navbar__link" tabIndex={4}>
           Solicitar demo
         </NavLink>
       </div>
