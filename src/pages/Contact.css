@@ -19,17 +19,13 @@
 .contact__header h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  color: #fff;
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  color: var(--text);
   line-height: 1.2;
 }
 
-.contact__highlight {
-  color: #2F6FED;
-}
-
 .contact__header p {
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 0;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.6;
@@ -37,7 +33,7 @@
 
 .contact__card {
   background: rgba(47, 111, 237, 0.05);
-  border: 1px solid rgba(47, 111, 237, 0.2);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 3rem;
   width: 100%;
@@ -65,20 +61,20 @@
 .contact__form-group label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text);
 }
 
 .contact__form-group input,
 .contact__form-group textarea,
 .contact__form-group select {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(47, 111, 237, 0.2);
-  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
-  color: #fff;
+  color: var(--text);
   font-family: inherit;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact__form-group input::placeholder,
@@ -91,7 +87,7 @@
 .contact__form-group select:focus {
   outline: none;
   background: rgba(47, 111, 237, 0.1);
-  border-color: #2F6FED;
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.1);
 }
 
@@ -112,35 +108,21 @@
 
 .contact__form-group select option {
   background: #0d1b3e;
-  color: #fff;
+  color: var(--text);
 }
 
 .contact__field-error {
   font-size: 0.8rem;
-  color: #f87171;
+  color: var(--error);
   margin: 0;
 }
 
 .contact__btn {
-  background: linear-gradient(135deg, #1A4DB8 0%, #2F6FED 100%);
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(47, 111, 237, 0.3);
-}
-
-.contact__btn:hover:not(:disabled) {
-  box-shadow: 0 6px 20px rgba(47, 111, 237, 0.4);
-}
-
-.contact__btn:disabled {
-  opacity: 0.8;
-  cursor: not-allowed;
 }
 
 .contact__features {
@@ -150,18 +132,17 @@
 }
 
 .contact__features h2 {
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
 }
 
 .contact__features-card {
   display: flex;
   flex-direction: column;
-  padding: 2rem !important;
+  padding: 2rem;
   gap: 0;
-  max-height: fit-content;
 }
 
 .contact__features-list {
@@ -183,34 +164,15 @@
 }
 
 .contact__features-icon {
-  color: #2F6FED;
+  color: var(--accent);
   font-size: 1rem;
   flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
-  .contact {
-    gap: 6rem;
-  }
-
-  .contact__section {
-    gap: 3rem;
-  }
-
-  .contact__card {
-    padding: 2rem;
-  }
-
-  .contact__features {
-    padding: 1.5rem;
-  }
-
-  .contact__form-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .contact__header h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
+  .contact          { gap: 6rem; }
+  .contact__section { gap: 3rem; }
+  .contact__card    { padding: 2rem; }
+  .contact__features { padding: 1.5rem; }
+  .contact__form-row { grid-template-columns: 1fr; gap: 1rem; }
 }
